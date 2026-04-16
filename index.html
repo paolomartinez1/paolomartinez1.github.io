@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendas da Comissão de Trabalho do Tesouro - CGIBS</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --text: #18212b;
+      --muted: #637282;
+      --line: #d9e0e7;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --hero1: #0f172a;
+      --hero2: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    body { padding: 18px; }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    .hero {
+      background: linear-gradient(135deg, var(--hero1), var(--hero2));
+      color: white;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 14px 28px rgba(15, 23, 42, .14);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .logo-wrap {
+      background: rgba(255,255,255,.96);
+      border-radius: 12px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 72px;
+    }
+    .logo-wrap img {
+      display: block;
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+    }
+    .hero-copy {
+      min-width: 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 6px 0;
+      font-size: 22px;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+    .period {
+      font-size: 16px;
+      line-height: 1.2;
+      font-weight: 600;
+      opacity: .95;
+      margin-bottom: 4px;
+    }
+    .generated-at {
+      font-size: 13px;
+      line-height: 1.2;
+      opacity: .88;
+    }
+    .day-section {
+      margin: 0 0 14px 0;
+    }
+    .day-section h2 {
+      margin: 0 0 8px 0;
+      font-size: 16px;
+      color: #0f172a;
+      border-bottom: 1px solid #d7dfeb;
+      padding-bottom: 4px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .card {
+      display: grid;
+      grid-template-columns: 170px minmax(0,1fr);
+      gap: 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, .04);
+      min-width: 0;
+      align-items: stretch;
+    }
+    .time {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      white-space: nowrap;
+      line-height: 1.1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+    }
+    .content {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .title {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      overflow-wrap: anywhere;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .teams-link, .calendar-link {
+      display: inline-block;
+      padding: 7px 11px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      word-break: break-word;
+    }
+    .teams-link {
+      background: #eaf2ff;
+      color: #1347b8;
+    }
+    .calendar-link {
+      background: #eef6ee;
+      color: #23633b;
+    }
+    .no-link {
+      color: #9b1c1c;
+      font-size: 12px;
+      align-self: center;
+    }
+    .empty {
+      background: white;
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    @media (max-width: 860px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .logo-wrap img {
+        max-width: 220px;
+      }
+      .card {
+        grid-template-columns: 1fr;
+      }
+      .time {
+        justify-content: flex-start;
+      }
+      .hero-copy {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="logo-wrap">
+          <img src="data:image/png;base64,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" alt="Logotipo do CGIBS">
+        </div>
+        <div class="hero-copy">
+          <h1>Agendas da Comissão de Trabalho do Tesouro - CGIBS</h1>
+          <div class="period">16/04/2026 a 24/04/2026</div>
+          <div class="generated-at">Gerado em 16/04/2026 às 15:18</div>
+        </div>
+      </div>
+    </header>
+    <section class="day-section">
+  <h2>quinta-feira, 16/04/2026</h2>
+  <div class="cards">
+    <article class="card">
+  <div class="time">09:30–11:00</div>
+  <div class="content">
+    <div class="title">Distribuição Frente 1 - Receita inicial</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:7AA6BB4D-AD98-4FBF-98D2-103AFFCECF29@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260416T093000%0ADTEND:20260416T110000%0ASUMMARY:Distribui%C3%A7%C3%A3o%20Frente%201%20-%20Receita%20inicial%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/28814818660757?p=QcV6kK8VdnjDNGqKfx%0D%5CnID%20da%20Reuni%C3%A3o:%20288%20148%20186%20607%2057%0D%5CnSenha:%20J4Wm2CE2%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20111%20600%20945%209%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1116009459&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+<article class="card">
+  <div class="time">11:00–12:00</div>
+  <div class="content">
+    <div class="title">Distribuição Frente 3 - Cálculos</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:156A1965-DBDE-4B3A-84F8-A6386B4B4401@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260416T110000%0ADTEND:20260416T120000%0ASUMMARY:Distribui%C3%A7%C3%A3o%20Frente%203%20-%20C%C3%A1lculos%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/26235241729719?p=SVUVARUwvM2zHC6V14%0D%5CnID%20da%20Reuni%C3%A3o:%20262%20352%20417%20297%2019%0D%5CnSenha:%20p4a9Ye7t%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20114%20401%20553%202%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1144015532&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+<article class="card">
+  <div class="time">14:30–16:00</div>
+  <div class="content">
+    <div class="title">Reunião conjunta Gestão Financeira e Contabilidade</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_YmQ2ODJkMDMtOWZiMS00NWVkLTk1ZWItOGI4NGQ1MjdhOWIy%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:8F68CE59-1395-4075-9500-76A5E9CC1A14@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260416T143000%0ADTEND:20260416T160000%0ASUMMARY:Reuni%C3%A3o%20conjunta%20Gest%C3%A3o%20Financeira%20e%20Contabilidade%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/266438581956022?p=LoKpmL1aj4og98Kw8X%0D%5CnID%20da%20Reuni%C3%A3o:%20266%20438%20581%20956%20022%0D%5CnSenha:%20RM76nF3t%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YmQ2ODJkMDMtOWZiMS00NWVkLTk1ZWItOGI4NGQ1MjdhOWIy%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20118%20220%20877%202%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1182208772&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_YmQ2ODJkMDMtOWZiMS00NWVkLTk1ZWItOGI4NGQ1MjdhOWIy@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YmQ2ODJkMDMtOWZiMS00NWVkLTk1ZWItOGI4NGQ1MjdhOWIy%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+<section class="day-section">
+  <h2>sexta-feira, 17/04/2026</h2>
+  <div class="cards">
+    <article class="card">
+  <div class="time">09:00–11:00</div>
+  <div class="content">
+    <div class="title">Nivelamento Reforma Tributária do Consumo</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTg2MWQ5MDUtM2UyZi00NzJkLWE5NGUtMjkzMTFkMjZjOGNl%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:CF1BCF4E-4A68-4DDB-9362-7675231D0E44@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260417T090000%0ADTEND:20260417T110000%0ASUMMARY:Nivelamento%20Reforma%20Tribut%C3%A1ria%20do%20Consumo%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/212767947012083?p=CcFhlciLXkbvUqZijB%0D%5CnID%20da%20Reuni%C3%A3o:%20212%20767%20947%20012%20083%0D%5CnSenha:%20iL3dG2ZF%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_NTg2MWQ5MDUtM2UyZi00NzJkLWE5NGUtMjkzMTFkMjZjOGNl%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20118%20042%20960%207%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1180429607&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_NTg2MWQ5MDUtM2UyZi00NzJkLWE5NGUtMjkzMTFkMjZjOGNl@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_NTg2MWQ5MDUtM2UyZi00NzJkLWE5NGUtMjkzMTFkMjZjOGNl%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+<article class="card">
+  <div class="time">15:00–16:00</div>
+  <div class="content">
+    <div class="title">Apresentação SIGEF</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZWM2NTNkYjYtZTQ1MS00ZjRlLWIwYjUtNTZhNzY2ZjM4Yjcx%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:4CDADDCE-1F62-483C-A2AE-EF309A25AE1D@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260417T150000%0ADTEND:20260417T160000%0ASUMMARY:Apresenta%C3%A7%C3%A3o%20SIGEF%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/256617289480979?p=9qsfOWPUlRk5p0vTzo%0D%5CnID%20da%20Reuni%C3%A3o:%20256%20617%20289%20480%20979%0D%5CnSenha:%20et7NH9ui%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_ZWM2NTNkYjYtZTQ1MS00ZjRlLWIwYjUtNTZhNzY2ZjM4Yjcx%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20113%20270%20581%209%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1132705819&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_ZWM2NTNkYjYtZTQ1MS00ZjRlLWIwYjUtNTZhNzY2ZjM4Yjcx@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_ZWM2NTNkYjYtZTQ1MS00ZjRlLWIwYjUtNTZhNzY2ZjM4Yjcx%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+<section class="day-section">
+  <h2>quarta-feira, 22/04/2026</h2>
+  <div class="cards">
+    <article class="card">
+  <div class="time">09:00–11:00</div>
+  <div class="content">
+    <div class="title">Gestão Financeira e Arrecadação</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_M2U5MGU0M2MtNjFlMy00YjE5LWJjNTEtYTM3NDcwZTdiMjcy%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:DF060026-E2EC-452B-859F-9B410F33F133@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260422T090000%0ADTEND:20260422T110000%0ASUMMARY:Gest%C3%A3o%20Financeira%20e%20Arrecada%C3%A7%C3%A3o%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/285057751522117?p=lUFz8mPtGIXYMFMZiV%0D%5CnID%20da%20Reuni%C3%A3o:%20285%20057%20751%20522%20117%0D%5CnSenha:%202R23Ei6x%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_M2U5MGU0M2MtNjFlMy00YjE5LWJjNTEtYTM3NDcwZTdiMjcy%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20115%20319%20149%202%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1153191492&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_M2U5MGU0M2MtNjFlMy00YjE5LWJjNTEtYTM3NDcwZTdiMjcy@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_M2U5MGU0M2MtNjFlMy00YjE5LWJjNTEtYTM3NDcwZTdiMjcy%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+<article class="card">
+  <div class="time">11:00–12:00</div>
+  <div class="content">
+    <div class="title">Comissão de Trabalho do Tesouro - Orçamento</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:F43EF495-874D-40C1-A5D2-B3690E921372@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260422T110000%0ADTEND:20260422T120000%0ASUMMARY:Comiss%C3%A3o%20de%20Trabalho%20do%20Tesouro%20-%20Or%C3%A7amento%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/25272328132935?p=HldMGpCKxIkPOpI5A7%0D%5CnID%20da%20Reuni%C3%A3o:%20252%20723%20281%20329%2035%0D%5CnSenha:%20FJ6Bw3hA%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20114%20518%20094%206%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1145180946&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+<article class="card">
+  <div class="time">15:00–17:00</div>
+  <div class="content">
+    <div class="title">Reunião Coordenadores Subgrupos</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTJlMTZhZmUtMTRmZS00YjIxLTkyYzUtYjNjOTRiZmUxOGYx%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:FF5500BD-0F96-4613-94A6-E63D68E9C817@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260422T150000%0ADTEND:20260422T170000%0ASUMMARY:Reuni%C3%A3o%20Coordenadores%20Subgrupos%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/244611688136859?p=lb4UZVYeG1bvjJClKc%0D%5CnID%20da%20Reuni%C3%A3o:%20244%20611%20688%20136%20859%0D%5CnSenha:%20K7WW9Sd6%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_MTJlMTZhZmUtMTRmZS00YjIxLTkyYzUtYjNjOTRiZmUxOGYx%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20116%20631%20371%200%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1166313710&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_MTJlMTZhZmUtMTRmZS00YjIxLTkyYzUtYjNjOTRiZmUxOGYx@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_MTJlMTZhZmUtMTRmZS00YjIxLTkyYzUtYjNjOTRiZmUxOGYx%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+<article class="card">
+  <div class="time">17:00–18:00</div>
+  <div class="content">
+    <div class="title">Comissão de Trabalho do Tesouro - SIGEF</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_YTQzY2QyZjMtZWEyOS00OTQ4LTgyYmMtMWE5MDBiYzAxMjM0%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:CA522DF3-63ED-49CA-A77E-EED41FFCD1AB@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260422T170000%0ADTEND:20260422T180000%0ASUMMARY:Comiss%C3%A3o%20de%20Trabalho%20do%20Tesouro%20-%20SIGEF%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/235832567869258?p=Wczq2KJxKeuOcUPGso%0D%5CnID%20da%20Reuni%C3%A3o:%20235%20832%20567%20869%20258%0D%5CnSenha:%20pB3jq3K3%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YTQzY2QyZjMtZWEyOS00OTQ4LTgyYmMtMWE5MDBiYzAxMjM0%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20112%20029%20699%206%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1120296996&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_YTQzY2QyZjMtZWEyOS00OTQ4LTgyYmMtMWE5MDBiYzAxMjM0@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YTQzY2QyZjMtZWEyOS00OTQ4LTgyYmMtMWE5MDBiYzAxMjM0%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+<section class="day-section">
+  <h2>quinta-feira, 23/04/2026</h2>
+  <div class="cards">
+    <article class="card">
+  <div class="time">09:30–11:00</div>
+  <div class="content">
+    <div class="title">Distribuição Frente 1 - Receita inicial</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:775AE0D1-2249-449A-AB34-66349E783514@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260423T093000%0ADTEND:20260423T110000%0ASUMMARY:Distribui%C3%A7%C3%A3o%20Frente%201%20-%20Receita%20inicial%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/28814818660757?p=QcV6kK8VdnjDNGqKfx%0D%5CnID%20da%20Reuni%C3%A3o:%20288%20148%20186%20607%2057%0D%5CnSenha:%20J4Wm2CE2%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20111%20600%20945%209%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1116009459&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_NzI3OWFjZjctMzA4Zi00NGU5LTljZGEtNjBmNmFlMWVjZDdj%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+<article class="card">
+  <div class="time">11:00–12:00</div>
+  <div class="content">
+    <div class="title">Distribuição Frente 3 - Cálculos</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:495036E6-EEA1-4858-BD8D-5B2F6886849E@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260423T110000%0ADTEND:20260423T120000%0ASUMMARY:Distribui%C3%A7%C3%A3o%20Frente%203%20-%20C%C3%A1lculos%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/26235241729719?p=SVUVARUwvM2zHC6V14%0D%5CnID%20da%20Reuni%C3%A3o:%20262%20352%20417%20297%2019%0D%5CnSenha:%20p4a9Ye7t%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20114%20401%20553%202%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1144015532&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_OGRlMzBiZTktODY2ZS00Y2Q5LWE2YTAtMzU2ZDBjZjFmNzY3%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+<section class="day-section">
+  <h2>sexta-feira, 24/04/2026</h2>
+  <div class="cards">
+    <article class="card">
+  <div class="time">15:00–16:00</div>
+  <div class="content">
+    <div class="title">Comissão de Trabalho do Tesouro - Orçamento</div>
+    <div class="actions">
+      <a class='teams-link' href='https://teams.microsoft.com/l/meetup-join/19%3ameeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2%40thread.v2/0?context=%7b%22Tid%22%3a%2215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%22%2c%22Oid%22%3a%22bdcb1596-14f0-43af-a6ec-a2a1204707bb%22%7d' target='_blank' rel='noopener noreferrer'>Clique aqui para acessar a reunião</a>
+      <a class='calendar-link' href='data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//OpenAI//Agenda%20CT%20Tesouro%20CGIBS//PT-BR%0ACALSCALE:GREGORIAN%0AMETHOD:PUBLISH%0ABEGIN:VEVENT%0AUID:8FB3770C-9D34-43F7-8EE8-1B66D3839541@cgibs%0ADTSTAMP:20260416T151855%0ADTSTART:20260424T150000%0ADTEND:20260424T160000%0ASUMMARY:Comiss%C3%A3o%20de%20Trabalho%20do%20Tesouro%20-%20Or%C3%A7amento%0ADESCRIPTION:%0D%5Cn________________________________________________________________________________%0D%5CnReuni%C3%A3o%20do%20Microsoft%20Teams%0D%5CnIngressar:%20https://teams.microsoft.com/meet/25272328132935?p=HldMGpCKxIkPOpI5A7%0D%5CnID%20da%20Reuni%C3%A3o:%20252%20723%20281%20329%2035%0D%5CnSenha:%20FJ6Bw3hA%0D%5Cn________________________________%0D%5CnPrecisa%20de%20ajuda?%3Chttps://aka.ms/JoinTeamsMeeting?omkt=pt-BR%3E%20%7C%20Refer%C3%AAncia%20do%20sistema%3Chttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%3E%0D%5CnIngressar%20em%20um%20dispositivo%20de%20videoconfer%C3%AAncia%0D%5CnChave%20do%20locat%C3%A1rio:%20rsgov@m.webex.com%0D%5CnID%20do%20Video:%20114%20518%20094%206%0D%5CnMais%20informa%C3%A7%C3%B5es%3Chttps://www.webex.com/msteams?confid=1145180946&amp;tenantkey=rsgov&amp;domain=m.webex.com%3E%0D%5CnPara%20organizadores:%20Op%C3%A7%C3%B5es%20de%20reuni%C3%A3o%3Chttps://teams.microsoft.com/meetingOptions/?organizerId=bdcb1596-14f0-43af-a6ec-a2a1204707bb&amp;tenantId=15dcd909-8dc0-40e9-a1e5-cecb053cdd1a&amp;threadId=19_meeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2@thread.v2&amp;messageId=0&amp;language=pt-BR%3E%0D%5Cn%5Bhttps://estado.rs.gov.br/upload/recortes/201707/28095927_1267705_GDO.png%5D%0D%5Cn________________________________________________________________________________%0D%5Cn%5Cn%5Cnhttps://teams.microsoft.com/l/meetup-join/19%253ameeting_YjJkMWYxNjMtN2QzMS00NDU3LTlmY2UtZDIzMjU4ODNiODA2%2540thread.v2/0?context=%257b%2522Tid%2522%253a%252215dcd909-8dc0-40e9-a1e5-cecb053cdd1a%2522%252c%2522Oid%2522%253a%2522bdcb1596-14f0-43af-a6ec-a2a1204707bb%2522%257d%0ALOCATION:Reuni%C3%B5es%20do%20Microsoft%20Teams%0AEND:VEVENT%0AEND:VCALENDAR' download='reuniao.ics'>Adicionar à agenda</a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+  </div>
+</body>
+</html>
